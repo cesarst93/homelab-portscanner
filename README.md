@@ -4,7 +4,7 @@
 
 **Author:** César Asto Oré
 
-**Creation date:** 06-set-2026
+**Creation date:** 06-Sep-2026
 
 ## Overview
 
@@ -24,7 +24,7 @@ This first cybersecurity home lab consists of querying the state of connections 
 
 ### Target Machine
 
-Comenzamos comprobando la conexión con la máquina atacante usando el comando "ping". Seguido, consultamos las conexiones activas en nuestra máquina con el comando "ss". Para este laboratorio, instalamos 3 servicios: ssh, web y ftp.
+We start by checking connectivity with the attacker machine using the "ping" command. Next, we check the active connections on our machine with the "ss" command. For this lab, we install 3 services: SSH, web, and FTP.
 
 >**ss** is used to dump socket statistics. It allows showing information similar to netstat. It can display more TCP and state information than other tools.
 >
@@ -102,8 +102,8 @@ To              Action      From
 
 ### Attacker Machine
 
-De igual forma, comprobamos conectividad con la máquina objetivo usando el comando "ping", a fin de evitar problemas de configuración de red.
-A continuación, utilizamos la herramienta "netcat" ("nc") para conocer el estado de conexión de los puertos.
+Likewise, we check connectivity with the target machine using the "ping" command, to rule out network configuration issues.
+Then, we use the "netcat" ("nc") tool to find out the connection state of the ports.
 
 >**netcat** is a simple Unix utility which reads and writes data across network connections, using TCP or UDP protocol. It is designed to be a reliable  "back-end"  tool  that can be used directly or easily driven by other programs and scripts. At the same time, it is a feature-rich network  debugging and exploration tool, since it can create almost any kind of connection you would need and has several interesting  built-in capabilities.   Netcat,  or "nc" as the actual program is named, should have been supplied long ago as another one of those cryptic  but  standard Unix tools.
 >
@@ -178,7 +178,8 @@ After adding rules in firewall:
 With the Python script, we built a program that queries the state of the target server's ports. The results show that ports 21, 22, and 80 are open, while port 8080 was refused and port 9999 timed out.
 
 ```plaintext
-ubuntu@StevensUbuntu:~$ python3 ~/Projects/PortScanner/PortScanner.py
+┌──(kali㉿kali)-[~]
+└─$ python3 ~/Projects/PortScanner/PortScanner.py
 TCP Port Scanner.
 Enter the target IP address and the ports you want to scan (comma-separated).
 Target IP: 10.0.0.102

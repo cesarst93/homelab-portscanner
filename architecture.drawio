@@ -1,0 +1,41 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="bOCVGaHMDApySJsRk5lj">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-1" parent="1" style="image;aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;points=[[0.5,0.102,0],[0.5,0.932,0],[0.172,0.5,0],[0.997,0.576,0],[0.993,0.323,0],[0.993,0.832,0],[0,0.782,0],[0.173,0.033,0]];labelPerimeter=1;" value="Attacker machine&lt;div&gt;(Kali Linux)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="61.800000000000004" width="45.6" x="170" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-2" parent="1" style="image;aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Server_Desktop.svg;points=[[0.5,0.062,0],[0.5,0.932,0],[0,0.555,0],[1,0.44,0],[1,0.16,0],[0.996,0.725,0],[0.004,0.84,0],[0.004,0.27,0]];labelPerimeter=1;" value="Target machine&lt;div&gt;(Ubuntu)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="42.599999999999994" x="510" y="283.9" as="geometry" />
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-5" edge="1" parent="1" source="MHTq_EDtMLVQcLUunGuh-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="MHTq_EDtMLVQcLUunGuh-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-7" connectable="0" parent="MHTq_EDtMLVQcLUunGuh-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="10.0.0.102" vertex="1">
+          <mxGeometry relative="1" x="-0.2927" y="-2" as="geometry">
+            <mxPoint x="13" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-3" parent="1" style="image;aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/switch/Switch_24_port_L2.svg;points=[[0.352,0,0],[0.5,0.876,0],[0.077,0.5,0],[0.93,0.5,0],[0.992,0.555,0],[0.99,0.733,0],[0.005,0.441,0],[0.005,0.263,0]];labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="51" width="74.4" x="330" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-4" edge="1" parent="1" source="MHTq_EDtMLVQcLUunGuh-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.102;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="MHTq_EDtMLVQcLUunGuh-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-6" connectable="0" parent="MHTq_EDtMLVQcLUunGuh-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="10.0.0.101" vertex="1">
+          <mxGeometry relative="1" x="-0.0275" y="2" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-8" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Services&lt;/span&gt;&lt;/h1&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); font-size: 12px; font-weight: normal;&quot;&gt;- TP server (Port 21)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); font-size: 12px; font-weight: normal;&quot;&gt;- SSH server (Port 22)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- Web server (Ports 80, 8080)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="441.3" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="MHTq_EDtMLVQcLUunGuh-9" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Tools&lt;/span&gt;&lt;/h1&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- Netcat&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- Visual Studio Code&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- Python&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="102.80000000000001" y="380" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

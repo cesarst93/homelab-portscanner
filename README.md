@@ -4,13 +4,15 @@
 
 **Author:** César Asto Oré
 
-**Start date:** 06/09/2026
-
-**End date:** In progress
+**Creation date:** 06-set-2026
 
 ## Overview
 
+This first cybersecurity home lab consists of querying the state of connections to a target machine through TCP ports. It covers configuring the target machine so that it can be scanned by the attacker machine. Basic services such as web, SSH, and FTP will be exposed.
+
 ## Architecture
+
+![architecture](./architecture.png)
 
 ## Toolbox
 - Kali Linux: attacker machine
@@ -96,12 +98,11 @@ To              Action      From
 21/tcp (v6)     ALLOW       Anywhere (v6)
 80/tcp (v6)     ALLOW       Anywhere (v6)
 8080/tcp (v6)   REJECT      Anywhere (v6)
-
 ```
 
 ### Attacker Machine
 
-Iniciamos comprobando conectividad con la máquina objetivo usando el comando "ping", a fin de evitar problemas de configuración de red.
+De igual forma, comprobamos conectividad con la máquina objetivo usando el comando "ping", a fin de evitar problemas de configuración de red.
 A continuación, utilizamos la herramienta "netcat" ("nc") para conocer el estado de conexión de los puertos.
 
 >**netcat** is a simple Unix utility which reads and writes data across network connections, using TCP or UDP protocol. It is designed to be a reliable  "back-end"  tool  that can be used directly or easily driven by other programs and scripts. At the same time, it is a feature-rich network  debugging and exploration tool, since it can create almost any kind of connection you would need and has several interesting  built-in capabilities.   Netcat,  or "nc" as the actual program is named, should have been supplied long ago as another one of those cryptic  but  standard Unix tools.
@@ -174,6 +175,29 @@ After adding rules in firewall:
 
 ## Results
 
+With the Python script, we built a program that queries the state of the target server's ports. The results show that ports 21, 22, and 80 are open, while port 8080 was refused and port 9999 timed out.
+
+```plaintext
+ubuntu@StevensUbuntu:~$ python3 ~/Projects/PortScanner/PortScanner.py
+TCP Port Scanner.
+Enter the target IP address and the ports you want to scan (comma-separated).
+Target IP: 10.0.0.102
+Ports: 21,22,80,8080,9999
+
+Scanning 10.0.0.102...
+
+Port 21: open
+Port 22: open
+Port 80: open
+Port 8080: refused
+Port 9999: timeout
+```
+
 ## Lessons learned
 
+- There are differences between the "reject" and "deny" firewall actions, so it is necessary to understand the behavior of each one: with "reject", the firewall actively answers the connection attempt with a TCP RST, so the scanner receives an immediate "connection refused" and reports the port as closed, whereas with "deny", the firewall silently drops the packet without any response, so the scanner waits until its timeout expires and reports the port as filtered.
+
 ## Next steps
+
+- Implement validation for network port input.
+- Implement handling for connection losses.
